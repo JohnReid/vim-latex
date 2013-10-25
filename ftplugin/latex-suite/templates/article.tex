@@ -4,6 +4,28 @@
 % Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
 %
 \documentclass[a4paper]{article}
+
+%
+% Good packages to have
+%
+\usepackage[UKenglish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+%
+% Set up biblatex
+%
+\usepackage[style=numeric-comp,backend=biber,sorting=none,doi=false,
+  url=false,isbn=false]{biblatex}
+\addbibresource{BiFA.bib}
+
+%
+% Specify title page
+%
+\title{}
+\author{John Reid}
+
+
 \begin{document}
 <++>
 \end{document}
