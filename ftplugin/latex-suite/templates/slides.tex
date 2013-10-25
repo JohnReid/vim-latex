@@ -1,0 +1,76 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+% :wrap=soft:maxLineLen=80:tabSize=2:indentSize=2: Added by JR to help editing with jEdit
+
+\documentclass{beamer}
+
+%
+% We load the babel package and specify the main language of the
+% document. If babel is detected, biblatex will automatically adjust
+% to the default language of the document.
+\usepackage[UKenglish]{babel}
+
+%
+% Set up our input encoding
+\usepackage[utf8]{inputenc}
+
+%
+% We load the csquotes package, which is required for
+% language-specific quotation marks. See the csquotes manual for
+% further information about this package.
+\usepackage{csquotes}
+
+%
+% We are using the 'authoryear' style in this example.
+% The default is the 'numerical' style.
+\usepackage[doi=false,isbn=false,url=false,
+  sorting=none,bibstyle=numeric,citestyle=authoryear,
+  backend=biber]{biblatex}
+%
+% We specify the database.
+\addbibresource{my-bibliography.bib}
+
+\title{Presentation Title}
+\author{John Reid}
+\date{Date}
+
+%\usetheme{Berkeley}
+\usetheme{default}
+%\usepackage{natbib}
+
+%
+% Define command for full screen figure
+\newcommand{\fullscreenfig}[1]{
+  \begin{center}
+    \includegraphics[height=3.0in,width=4.2in,keepaspectratio]{#1}
+  \end{center}
+}
+
+\setlength{\parskip}{\medskipamount}
+
+
+
+
+\begin{document}
+\maketitle
+
+\begin{frame}<beamer>
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+\section[Short]{Long}
+
+
+<++>
+
+\begin{frame}<beamer>
+  \frametitle{References}
+
+  \printbibliography
+\end{frame}
+
+\end{document}
