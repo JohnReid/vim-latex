@@ -15,17 +15,19 @@
 %
 % Set up biblatex
 %
-\usepackage[style=numeric-comp,backend=biber,sorting=none,doi=false,
-  url=false,isbn=false]{biblatex}
-\addbibresource{BiFA.bib}
+\usepackage[style=numeric-comp,backend=biber,sorting=none,doi=false,url=false,isbn=false]{biblatex}
+\addbibresource{<+bibliography.bib+>}
 
 %
 % Specify title page
 %
-\title{}
+\title{<+Title+>}
 \author{John Reid}
 
 
 \begin{document}
 <++>
+
+\printbibliography
+
 \end{document}
